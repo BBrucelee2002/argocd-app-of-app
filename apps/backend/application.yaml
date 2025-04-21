@@ -12,7 +12,9 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: backend
-  syncPolicy:
+  ssyncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:   # <-- Add this section
+    - CreateNamespace=true  # <-- Auto-creates missing namespaces

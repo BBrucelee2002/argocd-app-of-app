@@ -16,3 +16,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:   # <-- Add this section
+    - CreateNamespace=true  # <-- Auto-creates missing namespaces
